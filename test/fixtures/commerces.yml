@@ -1,0 +1,29 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  address_street: MyString
+  address_number: MyString
+  province: MyString
+  city: MyString
+  kind: MyString
+  promo_value: MyString
+  promo_date_range: MyString
+  promo_days_available: MyString
+  web: MyString
+  latitude: MyString
+  longitude: MyString
+
+two:
+  name: MyString
+  address_street: MyString
+  address_number: MyString
+  province: MyString
+  city: MyString
+  kind: MyString
+  promo_value: MyString
+  promo_date_range: MyString
+  promo_days_available: MyString
+  web: MyString
+  latitude: MyString
+  longitude: MyString
