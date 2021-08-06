@@ -10,28 +10,29 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20_210_804_225_941) do
-  create_table 'commerces', force: :cascade do |t|
-    t.integer 'promo_id', null: false
-    t.string 'name'
-    t.string 'address_street'
-    t.string 'address_number'
-    t.string 'province'
-    t.string 'city'
-    t.string 'kind'
-    t.string 'web'
-    t.string 'latitude'
-    t.string 'longitude'
-    t.datetime 'created_at', precision: 6, null: false
-    t.datetime 'updated_at', precision: 6, null: false
-    t.index ['promo_id'], name: 'index_commerces_on_promo_id'
+ActiveRecord::Schema.define(version: 2021_08_04_225941) do
+
+  create_table "commerces", force: :cascade do |t|
+    t.integer "promo_id", null: false
+    t.string "name"
+    t.string "address_street"
+    t.integer "address_number"
+    t.string "city"
+    t.string "kind"
+    t.string "web"
+    t.string "latitude"
+    t.string "longitude"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["promo_id"], name: "index_commerces_on_promo_id"
   end
 
-  create_table 'promos', force: :cascade do |t|
-    t.string 'value', null: false
-    t.string 'date_range', null: false
-    t.string 'days_available', null: false
-    t.datetime 'created_at', precision: 6, null: false
-    t.datetime 'updated_at', precision: 6, null: false
+  create_table "promos", force: :cascade do |t|
+    t.string "value", null: false
+    t.string "date_range", null: false
+    t.string "days_available", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
   end
+
 end

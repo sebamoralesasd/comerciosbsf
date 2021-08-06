@@ -12,8 +12,7 @@ class CreateTables < ActiveRecord::Migration[6.0]
       t.references :promo, null: false
       t.string :name
       t.string :address_street
-      t.string :address_number
-      t.string :province
+      t.integer :address_number
       t.string :city
       t.string :kind
       t.string :web
