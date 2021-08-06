@@ -1,0 +1,11 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  value: MyString
+  date_range: MyString
+  days_available: MyString
+
+two:
+  value: MyString
+  date_range: MyString
+  days_available: MyString

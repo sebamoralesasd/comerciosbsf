@@ -11,15 +11,18 @@ require 'json'
 file = File.read('base.json')
 j = JSON.parse(file)['comercios']
 j.collect do |c|
+  promo = Promo.find_or_create_by(value: c['promo'],
+                                  date_range: c['vigencia'],
+                                  days_available: c['dias_aplica_promo'])
+
+  next unless promo.save
+
   com = Commerce.new(name: c['nombre_fantasia'],
                      address_street: c['direccion_calle'],
                      address_number: c['direccion_nro'].to_i,
-                     province: c['provincia'],
                      city: c['localidad'],
                      kind: c['rubro_asj'],
-                     promo_value: c['promo'],
-                     promo_date_range: c['vigencia'],
-                     promo_days_available: c['dias_aplica_promo'],
+                     promo: promo,
                      web: c['web'],
                      latitude: c['latitud'].to_i,
                      longitude: c['longitud'].to_i)
